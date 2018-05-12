@@ -1,6 +1,6 @@
 # Bundle
-client/compiled/*
-client/compiled
+dist/compiled/*
+dist/compiled
 
 # Configs
 server/config.js

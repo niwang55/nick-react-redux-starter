@@ -13,10 +13,10 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(bodyParser.text({defaultCharset: 'utf-8'}));
 app.use(compression());
 
-app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
 });
 
 app.listen(3000, function() {
