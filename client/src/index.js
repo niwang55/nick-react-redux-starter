@@ -6,6 +6,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { MuiThemeProvider } from 'material-ui';
+
 // React Router
 import { BrowserRouter } from 'react-router-dom';
 
@@ -23,7 +25,9 @@ const store = createStore(reducer, applyMiddleware(logger));
 ReactDOM.render((
   <Provider store={store}>
     <BrowserRouter>
-      <App />
+      <MuiThemeProvider>
+        <App />
+      </MuiThemeProvider>
     </BrowserRouter>
   </Provider>
 ), document.getElementById('app'));
