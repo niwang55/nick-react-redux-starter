@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const compression = require('compression');
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 // Middleware
@@ -19,6 +21,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
 });
 
-app.listen(3000, function() {
-  console.log('App is now listening on port 3000');
+app.listen(PORT, function() {
+  console.log(`App is running on http://localhost:${PORT}`);
 });

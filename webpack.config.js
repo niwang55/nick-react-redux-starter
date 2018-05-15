@@ -24,7 +24,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: "./client",
+    contentBase: "./dist",
     open: true,
     inline: true,
     historyApiFallback: true,
